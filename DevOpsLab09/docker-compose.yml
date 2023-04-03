@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+   db:
+     image: mysql
+     command: --default-authentication-plugin=mysql_native_password
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: password 
+     volumes: 
+      -  dv-db:/var/lib/mysql
+   
+   adminer:
+      image: adminer
+      restart: always
+      ports: 
+        - 8102:8080
+
+volumes:
+   dv-db:
