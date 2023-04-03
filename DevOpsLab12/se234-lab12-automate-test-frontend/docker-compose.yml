@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  backend:
+    image: dto80/se234-lab12
+    ports:
+      - 8000:8080
+  fontend:
+    image: soraweesri/labaisu99
+    ports:
+      - 8001:80
