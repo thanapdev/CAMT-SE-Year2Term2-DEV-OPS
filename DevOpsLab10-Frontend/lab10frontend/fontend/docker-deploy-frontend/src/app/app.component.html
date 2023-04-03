@@ -1,0 +1,26 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Try to add you score(may be u can get A++++)</h1>
+    <p class="lead">You may add your socore to see how your grade will?</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+      <form class="form-inline">
+          <div class="form-group mb-2">
+            <label for="staticEmail2" class="sr-only"></label>
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Enter your score">
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">Password</label>
+            <input [(ngModel)]="score" name="score" type="text" class="form-control" id="score" placeholder="Score...">
+          </div>
+          <button type="submit" class="btn btn-primary mb-2" (click)="getGrade()">Submit</button>
+        </form>
+  </div>
+  <div *ngIf="showOutput" class="col-md-6">
+    You grade is
+    <button id="answer" type="button" [class]=outputClass>{{grade}}</button>
+  </div>
+</div>
+

@@ -1,0 +1,6 @@
+version: '3.3'
+services:
+  frontend:
+    image: thanap151255/234-deploylab-frontend:latest
+    ports:
+      - "8086:80"
