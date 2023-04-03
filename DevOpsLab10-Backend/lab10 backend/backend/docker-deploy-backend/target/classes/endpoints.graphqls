@@ -1,0 +1,8 @@
+schema {
+    query: Query
+#    mutation: Mutation
+}
+type Query{
+    getGradeFromScore(score:Float):Grade
+}
+
